@@ -51,8 +51,8 @@ struct DoubleLinkedList {
 		// 2. 리스트에 삽입
 		// 1) 리스트가 비어있을 경우
 		if (head.next == nullptr) {	
-			newNode->prev = head;
-			newNode->next = tail;
+			newNode->prev = &head;
+			newNode->next = &tail;
 
 			head.next = newNode;
 			tail.prev = newNode;
@@ -95,7 +95,7 @@ struct DoubleLinkedList {
 		else {  
 			// new node의 prev, next set
 			newNode->prev = tail.prev;
-			newNode->next = tail;
+			newNode->next = &tail;
 
 			// prev node의 next set
 			tail.prev->next = newNode;
