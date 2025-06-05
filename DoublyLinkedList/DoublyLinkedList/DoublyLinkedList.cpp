@@ -152,6 +152,6 @@ int main() {
 	DoubleLinkedList<int>::Iterator iter = MyList.begin();
 	for (; iter != MyList.end(); ++iter)
 	{
-		std::cout << *iter << std::endl;
+		cout << *iter << endl;
 	}
 }
