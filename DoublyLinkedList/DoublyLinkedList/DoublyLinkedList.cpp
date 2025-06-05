@@ -8,7 +8,7 @@ using namespace std;
 /* Node */
 template<typename T>
 struct Node {
-	T data;				// 노드 데이타
+	T data;							// 노드 데이터
 	Node<T>* next = nullptr;		// 다음 노드 주소
 	Node<T>* prev = nullptr;		// 이전 노드 주소
 };
@@ -143,7 +143,7 @@ int main() {
 	DoubleLinkedList<int> MyList;
 	MyList.push_back(10);
 	MyList.push_back(30);
-	MyList.push_back(40);   // 추가 테스트
+	MyList.push_back(40);    // 추가 테스트
 
 	Node<int>* pFind = MyList.find(30);
 	MyList.erase(pFind);     // 삭제 테스트
